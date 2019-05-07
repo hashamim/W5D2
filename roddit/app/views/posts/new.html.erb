@@ -1,0 +1,14 @@
+<%= flash.now[:errors] %>
+<form action="<%= sub_posts_url %>" method="POST">
+    <%= auth_token %>
+    <label>Title
+        <input type="text" name="title">
+    </label>
+    <label>Url
+        <input type="text" name="url">
+    </label>
+    <label>content
+        <input type="text" name="content">
+    </label>
+    <input type="submit" name="Create Sub">
+</form>

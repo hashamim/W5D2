@@ -12,8 +12,8 @@
 
 class Post < ApplicationRecord
     validates :title, :sub_id, :author_id, presence: true
-
-    belongs_to :sub
+    validates :title, length: {minimum: 1}
+    belongs_to :sub,
         primary_key: :id,
         foreign_key: :sub_id,
         class_name: :Sub 

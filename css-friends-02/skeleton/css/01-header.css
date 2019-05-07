@@ -47,3 +47,10 @@ body {
 .header-list > li:hover {
   background: #000;
 }
+
+.badge {
+  display: inline;
+  border-radius: 50%;
+  background: #000;
+  size: 40px;
+}

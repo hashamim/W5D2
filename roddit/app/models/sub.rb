@@ -9,7 +9,8 @@
 #
 
 class Sub < ApplicationRecord
-    validates :title, :moderator_id, null: false
+    validates :moderator_id, null: false
+    validates :title, length: {minimum: 1}
     belongs_to :moderator,
         primary_key: :id,
         foreign_key: :moderator_id,

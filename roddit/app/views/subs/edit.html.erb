@@ -1,0 +1,11 @@
+<%= flash.now[:errors] %>
+<form action="<%= sub_url(@sub) %>" method="POST">
+    <%= auth_token %>
+    <%= change_method("PATCH") %>
+    <label>Title
+        <input type="text" name="title" value="<%= @sub.title %>">
+    </label>
+    <label>description
+        <input type="text" name="description" value="<%= @sub.description %>">
+    </label>
+    <input type="submit" name="Create Sub">

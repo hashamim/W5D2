@@ -52,5 +52,9 @@ body {
   display: inline;
   border-radius: 50%;
   background: #000;
-  size: 40px;
+  padding: 1px 6px;
+}
+
+li:hover .badge {
+  background: #f00;
 }

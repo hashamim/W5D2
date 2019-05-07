@@ -14,4 +14,19 @@ class SubsController < ApplicationController
     def new
         render :new
     end
+    def create
+        @sub = current_user.subs.new(title: params[:title],description: params[:description])
+        if @sub.save
+            redirect_to sub_url(@sub)
+        else
+            render :new
+        end
+    end
+    def show
+        if @sub = Sub.find_by(id: params[:id])
+            render :show
+        # else
+        #     redirect_to subs_url
+        end
+    end
 end
